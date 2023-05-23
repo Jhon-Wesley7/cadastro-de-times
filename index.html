@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Times</title>
+</head>
+<body>
+    <h1>Cadastro de Times</h1>
+
+    <a href="/cadastrar">Cadastrar novo Time</a>
+
+    <h2>Times Cadastrados:</h2>
+    <ul>
+        {% for time in time %}
+            <li>
+                {{ time.nome }} - {{ time.jogadores }} - {{ time.resultado }}
+                <a href="/editar/{{ time.id }}">Editar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
